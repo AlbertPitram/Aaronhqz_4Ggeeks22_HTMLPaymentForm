@@ -1,169 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aaronhqz - Payment Form</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!-- Container -->
-    <div
-      class="container w-60 my-5 border border-bottom-0 rounded-top rounded-bottom"
-    >
-      <form class="fw-medium">
-        <div class="row rounded-top">
-          <h1>Payment form example</h1>
-        </div>
-
-        <div class="row m-2">
-          <div class="col">
-            <div class="alert alert-danger" role="alert">
-              Some fields are missing
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="postcard">
+            <div class="postcard-header">
+                <h1>My postcard</h1>
+                <img
+                    src="https://raw.githubusercontent.com/breatheco-de/exercise-postcard/e63a7916530cc850bd92aa1c2e19191837fb5c80/.learn/assets/4geeks.png"
+                />
             </div>
-          </div>
-        </div>
 
-        <!-- Credit Card Information -->
 
-        <div class="row m-2">
-          <div class="col-5">
-            <label for="card" class="form-label">Card Number</label><br />
-            <input
-              type="number"
-              name="cardNumber"
-              placeholder="xxxx-xxxx-xxxx-xxxx"
-              class="w-100 form-control"
-            />
-          </div>
+            <div class="postcard-body">
+                <div class="body-left"></div>
+                <p>Look how awesome! This is a postcard that I created using HTML 5, and CCS3 during my 4geeks Acdemy Course!</p>
+                <p>This is so cool, can't wait to start doing more stuff</p>
+                <div class="body-right"></div>
+                <form action="form">
+                    <label for="name">Some Name</label>
+                    <input type="text" id="name" name="name" required />
 
-          <div class="col-2">
-            <label for="cvc" class="form-label">CVC#</label><br />
-            <input
-              type="number"
-              name="cvc"
-              placeholder="0000"
-              class="w-100 form-control"
-            />
-          </div>
 
-          <div class="col-5">
-            <label for="amount" class="form-label mx-2">Amount</label><br />
-            <div class="d-flex">
-              <i class="fa-solid fa-dollar-sign"></i>
-              <input
-                type="number"
-                name="amount"
-                placeholder="Amount"
-                class="w-100 form-control"
-              />
+                    <label for="email">Some Email</label>
+                    <input type="email" id="email" name="email" required />
+
+
+                    <label for="comment">Some Comment</label>
+                    <input type="comment" id="comment" name="comment" required />
+
+
+                    <button type="submit">Send My Posycard</button>
+                </form>
             </div>
-          </div>
+
+
+            <div class="postcard-footer"></div>
         </div>
-
-        <!-- Personal Information -->
-
-        <div class="row m-2">
-          <!-- First Name -->
-          <div class="col-6">
-            <label class="form-label">Firt Name</label><br />
-            <input type="text" name="first name" class="w-100 form-control" />
-          </div>
-
-          <!-- Last Name -->
-          <div class="col-6">
-            <label class="form-label">Last Name</label><br />
-            <input type="text" name="last name" class="w-100 form-control" />
-          </div>
-        </div>
-
-        <!-- Billing address -->
-        <div class="row m-2">
-          <div class="col-6">
-            <label class="form-label">City</label><br />
-            <input type="text" name="city" class="w-100 form-control" />
-          </div>
-
-          <div class="col-3">
-            <label class="form-label">State</label><br />
-            <select name="states" class="w-100 form-select">
-              <option value="" disabled selected>Pick a state</option>
-              <option value="Florida">Florida</option>
-              <option value="New York">New York</option>
-              <option value="Luisiana">Luisiana</option>
-              <option value="New Jersey">New Jersey</option>
-            </select>
-          </div>
-
-          <div class="col-3">
-            <label class="form-label">Postal Code</label><br />
-            <input
-              type="number"
-              name="Postal Code"
-              class="w-100 form-control"
-            />
-          </div>
-        </div>
-
-        <div class="row m-2">
-          <div class="col-6">
-            <label class="form-label">We acccept:</label><br />
-            <div class="bg-secondary w-50 p-1 form-control">
-              <input type="radio" name="Master Card" value="HTML" />
-              <label><i class="fa-brands fa-cc-mastercard me-3"></i></label>
-
-              <input type="radio" name="Visa" value="HTML" />
-              <i class="fa-brands fa-cc-visa form me-3"></i>
-
-              <input type="radio" name="Discovery" value="HTML" />
-              <label><i class="fa-brands fa-cc-diners-club me-3"></i></label>
-
-              <input type="radio" name="American Express" value="HTML" />
-              <label><i class="fa-brands fa-cc-amex"></i></label>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <label for="postalCode" class="form-label">Message</label><br />
-            <textarea
-              name=""
-              cols="30"
-              rows="3"
-              class="form-control"
-            ></textarea>
-            <p>Add any notes here.</p>
-          </div>
-        </div>
-
-        <div class="row rounded-bottom">
-          <div class="col d-flex justify-content-end">
-            <div class="m-2">
-              <button class="btn btn-secondary">Cancel</button>
-            </div>
-            <div class="m-2">
-              <button class="btn btn-primary">Send</button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    </body>
 </html>
